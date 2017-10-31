@@ -1,10 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'c-page-not-found',
-    templateUrl: './login.component.html',
-    styleUrls: ['./login.component.styl']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.styl']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
 
 }

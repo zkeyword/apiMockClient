@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core'
-import { RouterModule, Routes } from '@angular/router'
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
-import { SelectivePreloadingStrategy } from "./selective-preloading-strategy"
-import { PageNotFoundComponent } from './components/error/error.component'
+import { SelectivePreloadingStrategy } from "./selective-preloading-strategy";
+import { ErrorComponent } from './components/error/error.component';
 
 /**
  * app路由
@@ -18,14 +18,10 @@ const appRoutes: Routes = [
         loadChildren: 'app/modules/login/login.module#LoginModule'
     },
     {
-        path: 'user',
-        loadChildren: 'app/modules/user/user.module#UserModule'
-    },
-    {
         path: '**',
-        component: PageNotFoundComponent
+        component: ErrorComponent
     }
-]
+];
 
 @NgModule({
     imports: [
@@ -38,5 +34,4 @@ const appRoutes: Routes = [
         RouterModule
     ]
 })
-
 export class AppRoutingModule { }

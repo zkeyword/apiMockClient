@@ -1,10 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'c-page-not-found',
+    selector: 'app-error',
     templateUrl: './error.component.html',
     styleUrls: ['./error.component.styl']
 })
-export class PageNotFoundComponent {
+export class ErrorComponent implements OnInit {
+
+    constructor() { }
+
+    ngOnInit() {
+    }
 
 }
