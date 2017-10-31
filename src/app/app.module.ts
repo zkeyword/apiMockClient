@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
-import { FormsModule } from '@angular/forms'
 import { HttpModule } from '@angular/http'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
@@ -23,8 +22,7 @@ import { ErrorComponent } from './components/error/error.component'
         AppRoutingModule,
         BrowserModule,
         BrowserAnimationsModule,
-        HttpModule,
-        FormsModule
+        HttpModule
     ],
     declarations: [
         AppComponent,
@@ -37,4 +35,5 @@ import { ErrorComponent } from './components/error/error.component'
     exports: [],
     bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
