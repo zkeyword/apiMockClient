@@ -1,24 +1,27 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { BrowserModule } from '@angular/platform-browser'
+import { NgModule } from '@angular/core'
+import { FormsModule } from '@angular/forms'
+import { HttpModule } from '@angular/http'
 
-import { AppComponent } from './app.component';
-import { TestComponent } from './test/test.component';
-import { Test2Component } from './test2/test2.component';
+import { AppComponent } from './app.component'
+import { AppRoutingModule } from './app-routing.module';
+import { PageNotFoundComponent } from './components/error/error.component'
+import { SelectivePreloadingStrategy } from "./selective-preloading-strategy"
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TestComponent,
-    Test2Component
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        PageNotFoundComponent
+    ],
+    imports: [
+        AppRoutingModule,
+        BrowserModule,
+        FormsModule,
+        HttpModule
+    ],
+    providers: [
+        SelectivePreloadingStrategy
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
