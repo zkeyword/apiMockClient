@@ -16,3 +16,5 @@ apiMock 后台管理客户端
 
     ng generate component component-name 
         // (ng generate directive|pipe|service|class|guard|interface|enum|module)
+
+    ng g c component-name
