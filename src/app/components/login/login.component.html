@@ -1,9 +1,16 @@
 <form [formGroup]="loginForm">
     <div>
+        <input class="form-control" type="text" formControlName="userName" placeholder="请输入密码...">
+        <div class="c-validator-invalid" [hidden]="!(loginForm.controls['userName'].errors && loginForm.controls['userName'].dirty)">
+            用户必填，6-15位！
+        </div>
+    </div>
+    <div>
         <input class="form-control" type="password" formControlName="password" placeholder="请输入密码...">
         <div class="c-validator-invalid" [hidden]="!(loginForm.controls['password'].errors && loginForm.controls['password'].dirty)">
             密码必填，6-15位！
         </div>
-        <button type="submit" class="btn btn-primary c-not-shadow" [disabled]="!loginForm.valid" (click)="login();">登 录</button>
     </div>
+    <button nz-button nzType="primary">测试按钮</button>
+    <button type="submit" class="btn btn-primary c-not-shadow" [disabled]="!loginForm.valid" (click)="login()">登 录</button>
 </form>
