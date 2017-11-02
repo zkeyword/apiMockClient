@@ -8,6 +8,7 @@ import { AppComponent } from './app.component'
 import { AppService } from './app.service'
 
 //modules
+import { NgZorroAntdModule } from 'ng-zorro-antd'
 import { AppRoutingModule } from './app-routing.module'
 
 //strategy
@@ -22,7 +23,8 @@ import { ErrorComponent } from './components/error/error.component'
         AppRoutingModule,
         BrowserModule,
         BrowserAnimationsModule,
-        HttpModule
+        HttpModule,
+        NgZorroAntdModule.forRoot()
     ],
     declarations: [
         AppComponent,
