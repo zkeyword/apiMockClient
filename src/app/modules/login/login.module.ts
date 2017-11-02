@@ -7,6 +7,8 @@ import { LoginRoutingModule } from './login-routing.module'
 
 import { LoginComponent } from '../../components/login/login.component'
 
+import { UsersService } from '../../services/users/users.service'
+
 @NgModule({
     imports: [
         CommonModule,
@@ -19,6 +21,8 @@ import { LoginComponent } from '../../components/login/login.component'
         LoginComponent
     ],
     exports: [],
-    providers: []
+    providers: [
+        UsersService
+    ]
 })
 export class LoginModule { }
