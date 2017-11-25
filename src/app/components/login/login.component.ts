@@ -4,7 +4,7 @@ import { Validators, FormControl, FormGroup, FormBuilder } from '@angular/forms'
 
 
 @Component({
-    selector: 'c-login',
+    selector: 'app-login',
     templateUrl: './login.component.html',
     styleUrls: ['./login.component.styl']
 })
@@ -13,13 +13,13 @@ export class LoginComponent implements OnInit {
     loginForm: FormGroup;
 
     constructor(private router: Router, private formBuilder: FormBuilder) {
-        let userNameFc = new FormControl('sysadmin', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(15)]))
-        let passwordFc = new FormControl('sysadmin', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(15)]))
+        const userNameFc = new FormControl('121212', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(15)]));
+        const passwordFc = new FormControl('12121212', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(15)]));
 
         this.loginForm = this.formBuilder.group({
             userName: userNameFc,
             password: passwordFc
-        })
+        });
     }
 
     /**
@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
     }
 
     login() {
-        console.log(this.loginForm.value)
+        console.log(this.loginForm.value, this);
     }
 
 }

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { SelectivePreloadingStrategy } from "./selective-preloading-strategy";
+import { SelectivePreloadingStrategy } from './selective-preloading-strategy';
 import { ErrorComponent } from './components/error/error.component';
 
 /**

@@ -1,5 +1,5 @@
-import { PreloadingStrategy, Route } from "@angular/router";
-import { Observable } from "rxjs";
+import { PreloadingStrategy, Route } from '@angular/router';
+import { Observable } from 'rxjs';
 
 /**
  * 预加载策略
