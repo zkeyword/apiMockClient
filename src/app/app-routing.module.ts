@@ -17,6 +17,14 @@ const appRoutes: Routes = [
         path: 'login',
         loadChildren: 'app/modules/login/login.module#LoginModule'
     },
+    // {
+    //     path: 'project',
+    //     loadChildren: 'app/modules/project/project.module#LoginModule'
+    // },
+    // {
+    //     path: 'interfaces',
+    //     loadChildren: 'app/modules/interfaces/interfaces.module#LoginModule'
+    // },
     {
         path: '**',
         component: ErrorComponent

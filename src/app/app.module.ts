@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // app
 import { AppComponent } from './app.component';
 import { AppService } from './app.service';
+import { HttpUtils } from './utils/http';
 
 // modules
 import { NgZorroAntdModule } from 'ng-zorro-antd';
@@ -31,6 +32,7 @@ import { ErrorComponent } from './components/error/error.component';
         ErrorComponent
     ],
     providers: [
+        HttpUtils,
         AppService,
         SelectivePreloadingStrategy
     ],

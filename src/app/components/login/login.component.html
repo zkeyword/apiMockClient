@@ -1,15 +1,15 @@
 <form [formGroup]="loginForm">
     <div>
-        <input class="form-control" type="text" formControlName="userName" placeholder="请输入密码...">
+        <input class="form-control" type="text" formControlName="userName" placeholder="请输入用户名">
         <div class="c-validator-invalid" [hidden]="!(loginForm.controls['userName'].errors && loginForm.controls['userName'].dirty)">
-            用户必填，6-15位！
+            用户名必填，5-15位！
         </div>
     </div>
     <div>
-        <input class="form-control" type="password" formControlName="password" placeholder="请输入密码...">
+        <input class="form-control" type="password" formControlName="password" placeholder="请输入密码">
         <div class="c-validator-invalid" [hidden]="!(loginForm.controls['password'].errors && loginForm.controls['password'].dirty)">
-            密码必填，6-15位！
+            密码必填，5-15位！
         </div>
     </div>
-    <button nz-button nzType="primary" [disabled]="!loginForm.valid" (click)="login()">测试按钮</button>
+    <button nz-button nzType="primary" [disabled]="!loginForm.valid" (click)="login()">登录</button>
 </form>

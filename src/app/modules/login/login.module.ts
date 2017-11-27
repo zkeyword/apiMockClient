@@ -4,6 +4,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 
 import { LoginRoutingModule } from './login-routing.module';
+import { LoginService } from '../../services/login/login.service';
+
 
 import { LoginComponent } from '../../components/login/login.component';
 
@@ -19,6 +21,8 @@ import { LoginComponent } from '../../components/login/login.component';
         LoginComponent
     ],
     exports: [],
-    providers: []
+    providers: [
+        LoginService
+    ]
 })
 export class LoginModule { }
